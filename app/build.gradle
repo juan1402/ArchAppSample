@@ -1,0 +1,28 @@
+apply plugin: 'com.android.application'
+apply from: '../android_commons.gradle'
+
+android {
+    defaultConfig {
+        applicationId ApplicationId.id
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    dataBinding {
+        enabled true
+    }
+}
+
+dependencies {
+    implementation project(Modules.common)
+    implementation project(Modules.dataSrc)
+    implementation project(Modules.features)
+    implementation project(Modules.navigation)
+
+    // KOIN
+    implementation Libraries.koin
+    implementation Libraries.koinViewModel
+
+    // ANDROID
+    implementation AndroidLibraries.appCompat
+    implementation AndroidLibraries.navigation
+    implementation AndroidLibraries.navigationFrag
+}

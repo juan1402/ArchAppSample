@@ -1,0 +1,7 @@
+<resources>
+    <string name="user_error">Something went wrong, please try again</string>
+    <string name="app_name">Code Challenge</string>
+    <string name="item_image">Item Image</string>
+    <string name="confidence">Confidence:  %s</string>
+    <string name="item_id">ID:  %s</string>
+</resources>

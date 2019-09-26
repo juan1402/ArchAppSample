@@ -1,0 +1,18 @@
+apply plugin: 'com.android.library'
+apply from: '../android_commons.gradle'
+
+android {
+    defaultConfig {
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    dataBinding {
+        enabled true
+    }
+}
+
+dependencies {
+    implementation AndroidLibraries.appCompat
+    implementation AndroidLibraries.navigation
+    implementation AndroidLibraries.navigationFrag
+    implementation project(Modules.navigation)
+}
